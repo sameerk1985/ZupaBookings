@@ -7,8 +7,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookingsAPI", "BookingsAPI\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Services", "Services\Services.csproj", "{DAB9B5D3-4343-413E-B5A2-1C2A09CFDB44}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookingsAPI.Tests", "BookingsAPI.Tests\BookingsAPI.Tests.csproj", "{5A71B603-8BFC-4240-AA27-C0993CCB018B}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Services.Tests", "Services.Tests\Services.Tests.csproj", "{C6F71037-0E0F-4D34-958B-FAC6DD092A8C}"
 EndProject
 Global
@@ -25,10 +23,6 @@ Global
 		{DAB9B5D3-4343-413E-B5A2-1C2A09CFDB44}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DAB9B5D3-4343-413E-B5A2-1C2A09CFDB44}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DAB9B5D3-4343-413E-B5A2-1C2A09CFDB44}.Release|Any CPU.Build.0 = Release|Any CPU
-		{5A71B603-8BFC-4240-AA27-C0993CCB018B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5A71B603-8BFC-4240-AA27-C0993CCB018B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5A71B603-8BFC-4240-AA27-C0993CCB018B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5A71B603-8BFC-4240-AA27-C0993CCB018B}.Release|Any CPU.Build.0 = Release|Any CPU
 		{C6F71037-0E0F-4D34-958B-FAC6DD092A8C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{C6F71037-0E0F-4D34-958B-FAC6DD092A8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C6F71037-0E0F-4D34-958B-FAC6DD092A8C}.Release|Any CPU.ActiveCfg = Release|Any CPU

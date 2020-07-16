@@ -17,6 +17,8 @@ namespace Services.Repositories
 
         bool CreateBooking(Booking booking);
 
+        bool CreateBooking(List<Booking> bookings, out string message);
+
         bool CancelBooking(Booking booking);
 
         bool UpdateBooking(Booking booking);

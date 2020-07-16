@@ -15,7 +15,7 @@ namespace BookingsAPI.Tests
         [TestInitialize]
         public void Setup()
         {
-            bookingRepository = new BookingRepository(10, 10);
+            bookingRepository = new BookingRepository();
         }
 
         [TestMethod]
@@ -64,6 +64,52 @@ namespace BookingsAPI.Tests
 
             bookings = bookingRepository.GetAvailableSeats();
             Assert.AreEqual(100, bookings.Count);
+        }
+
+        [TestMethod]
+        public void CreateBooking()
+        {
+            List<Booking> seats = new List<Booking>();
+            for(int i = 1; i<= 4; i++)
+            {
+                Booking booking = new Booking()
+                {
+                    ID = "A" + i.ToString(),
+                    Name = "test",
+                    Email = "test@test.com"
+                };
+                seats.Add(booking);
+            }
+
+            string message;
+            var success = bookingRepository.CreateBooking(seats, out message);
+            Assert.IsTrue(success);
+            Assert.AreEqual("Booking successfully made", message);
+
+            seats.Add(new Booking() {
+                ID = "A5",
+                Name = "test",
+                Email = "test@test.com"
+            });
+            success = bookingRepository.CreateBooking(seats, out message);
+            Assert.IsFalse(success);
+            Assert.AreEqual("Only maximum of 4 bookings allowed per person", message);
+
+            seats = new List<Booking>();
+            for (int i = 1; i <= 4; i++)
+            {
+                Booking booking = new Booking()
+                {
+                    ID = "A" + i.ToString(),
+                    Name = "test",
+                    Email = "test@test.com"
+                };
+                seats.Add(booking);
+            }
+
+            success = bookingRepository.CreateBooking(seats, out message);
+            Assert.IsFalse(success);
+            Assert.AreEqual("Seats A1, A2, A3, A4, are booked. Please select other seats.", message);
         }
     }
 }
